@@ -8,7 +8,7 @@
 <body>
     <h1>Welcome to My Error-Filled Page </h1>
     
-<p>This is a paragraph with mismatched tags and missing closing tags.</p>
+<p style="text-indent: 25px;">This is a paragraph with mismatched tags and missing closing tags.</p>
     
     <ol>
         <li>Item 1</li>
@@ -23,7 +23,7 @@
         <li>Item 10</li>
     </ol>
 
-    <p>This is another paragraph without proper indentation.</p>
+    <p style="text-indent: 25px;">This is another paragraph without proper indentation.</p>
     
     <img src="image.jpg" alt="two states of every programmer">
 
@@ -65,3 +65,26 @@
     </dl>
 </body>
 </html>
+
+<!-- 1.Missing doctype declaration <!DOCTYPE html>  added proper formatting with "!" then hitting the enter key
+2. Head tag misplaced - moved it below the html language tag (adjusted with the "!" then enter key shortcut)
+3. Meta viewport tag was also missing (fixed with "!" and enter key)
+4. Meta charset tag was missing (also fixed with "!" and enter key) ** as well as adjusting the title to move it into the document title area
+5. html tag should have "lang" not language - changed to lang
+6. Head tag had no closing tag - added a closing tag "</head>"
+7. h1 not closed - added closing tag
+8. paragraph not opened - added opening tag (also added indent with css)
+9. incorrect list closing tag - switched to </ol>
+10. Paragraph not closed - added closing tag (also added indent with css)
+11. No alt attribute - added alt attribute
+12. Anchor had incorrect closing tag as </img> - switched it to </a>
+13. Line 39 had an opening table tag where it should have been a closing tag - switched it to </td>
+14. image tag said "source" instead of "src" - switched to "src"
+15. Center tag was used - fixed it with the proper CSS
+16. Paragraph had an invalid attribute - fixed it with by changing the css to "background-color"
+17. Comment had no closing so the rest of the code was showing up as comments - closed the comment
+18. Anchor tag wasn't closed - added a closing anchor tag
+19. Emphasis tag was in an incorrect order - switched the nesting to have the emphasis tag close before the paragraph closed
+20. Description list elements had incorrect tags - added dt for the item title and dd for the item text
+
+ -->
