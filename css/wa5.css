@@ -52,6 +52,16 @@ html {
   line-height: 3em;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 /* Main Business Card Contents styles */
 .card h2, .card p {
   margin:0;
@@ -95,3 +105,4 @@ html {
 #willferrell footer p{
   font-size: 1.1em;
 }
+
