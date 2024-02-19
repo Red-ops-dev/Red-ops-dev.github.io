@@ -10,8 +10,6 @@ html {
   background-color: #ccc;
 }
 
-/* Selectors to be matched up with rulesets */
-
 
 /* Rulesets to be matched up with selectors */
 
@@ -34,16 +32,15 @@ html {
   border-radius: 0 0 1.5em 1.5em;
 }
 
-.card article img {
-  max-height: 100%;
-  float: right;
-}
 
 
 /* Card container set up styles */
 .card header, .card footer {
   height: 3em;
   padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 /* Header and Footer styles */
 .card footer p{
@@ -60,14 +57,41 @@ html {
   margin:0;
 }
 
-article {
+.card article {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   height:12em;
   background-color: rgba(0,0,0,0.25);
 }
 
-article p{
-  padding:1em;
+.card article p{
+  margin: 0;
+  padding-left: 1em;
   color:aliceblue;
+  flex-grow: 1;
+  order: 1;
 }
 
+.card article img {
+  max-height: 100%;
+  margin-left: auto;
+  order: 2;
+}
 
+#willferrell {
+  background-color: aqua;
+}
+
+#willferrell h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 900;
+}
+
+#willferrell p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#willferrell footer p{
+  font-size: 1.1em;
+}
