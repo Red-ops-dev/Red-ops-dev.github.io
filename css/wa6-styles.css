@@ -1,0 +1,62 @@
+body, html{
+    margin: 0 auto;
+    height:100vh;
+    background-color: blanchedalmond;
+    background-image: url(../img/ShoppingChannel.jpg);
+
+}
+
+.overlay1 {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    background-color: rgb(255, 98, 0);
+    z-index: 1000;
+}
+
+.Website {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 15px;
+    background-color: bisque;
+    width: 200px;
+    text-align: center;
+}
+
+.ShopToday {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: brown;
+    padding: 20px;
+}
+
+.overlay2 {
+    padding: 10px;
+    background-color: rgb(215, 237, 250);
+    width: 400px;
+    bottom: 0;
+    position: absolute;
+}
+
+.price1 {
+    padding: 10px;
+    bottom: 0;
+}
+
+.price2 {
+    bottom: 0;
+    padding: 10px;
+}
+
+.price3 {
+    padding: 10px;
+    bottom: -1000;
+}
+
+
+
+
+
+
