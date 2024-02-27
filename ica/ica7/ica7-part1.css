@@ -40,9 +40,11 @@ background-color: orangered;
 }
 
 #text3 {
-    position:sticky;
+    position: fixed;
     top: 0;
+    left: 50%;
     font-size: 50px;
     border: 5px solid green;
+    background-color: orangered;
 }
 
