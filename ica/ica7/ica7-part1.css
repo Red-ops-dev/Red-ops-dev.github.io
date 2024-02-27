@@ -2,6 +2,7 @@ body{
     background-color: beige;
 }
 #box1{
+    position: relative;
     border-style:solid;
     width: 40vw;
     height: 33vh;
@@ -13,12 +14,14 @@ body{
 }
 
 #text1 {
-    left: 150%;
-    top: 250px;
+    position: absolute;
+    left: 100%;
+    top: 0;
 
 }
 
 #box2{
+    position: relative;
     width: 73vw;
     height: 33vh;
     border-style: solid;
@@ -28,10 +31,14 @@ body{
 }
 
 #text2 {
+    position: absolute;
+    bottom: 0;
 }
 
 #box3{
-
+position:fixed;
+top: 0;
+left: 50%;
 border-radius: 10px;
 background-color: orangered;
 }
