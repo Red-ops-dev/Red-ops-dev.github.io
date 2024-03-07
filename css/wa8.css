@@ -6,15 +6,6 @@ body{
     font-family: "Gruppo", sans-serif;
 }
 
-html{
-    transition: .5s ease-in-out;
-}
-
-html:hover{
-    background-color: #CDD6D0;
-}
-
-
 nav{
     height: 50vh;
     display:flex;
@@ -39,7 +30,13 @@ nav a{
 h1 {
     color: #565676;
     animation: glow 1s ease-in-out infinite alternate;
+    transition: hover .5s ease;
 }
+
+h1:hover{
+    color:#8E3315
+}
+
 
 @keyframes glow{
     from{
