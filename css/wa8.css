@@ -1,0 +1,88 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D6A99A;
+    font-family: "Gruppo", sans-serif;
+}
+
+html{
+    transition: .5s ease-in-out;
+}
+
+html:hover{
+    background-color: #CDD6D0;
+}
+
+
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: #565676;
+    transition: 0.5s ease;
+}
+
+nav:hover{
+    background-color:#9F5941;
+}
+
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:#CDD6D0;
+}
+
+h1 {
+    color: #565676;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 30px rgb(255, 255, 255), 0 0 40px rgb(255, 255, 255),0 0 50px rgb(255, 255, 255);
+	 }
+	 to {
+	   text-shadow: 0 0 60px rgb(197, 197, 197), 0 0 70px rgb(197, 197, 197);
+	 }
+    }
+
+
+
+img{
+    object-fit: contain;
+    position: absolute;
+    width: 50vh;
+    height: 70vh;
+    animation: imgmove 5s infinite;
+}
+
+@keyframes imgmove{
+    0% {top:20%; left: auto;}
+    25% {top:40%; left: 40%;}
+    50% {top: 60%; left: 20%;}
+    75% {top: 35%; left:40%;}
+    100% {top: 20%; left: auto;}
+}
+
+
+
+#red-ball{
+    background-color: #8E3315;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:20vw;
+    top:50;
+    animation: bounce 5s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    40% {transform: translateY(-30px);} 
+    60% {transform: translateY(-15px);} 
+ } 
