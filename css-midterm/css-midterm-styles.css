@@ -10,7 +10,7 @@ header {
     font-family: "Rubik Mono One", monospace;
     font-size: larger;
     background-color: #f2f2f2;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -25,29 +25,39 @@ header {
 
 }
 
-.concert1 {
+.flex-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: flex-start;
+}
+
+
+.concert {
     background-color: #5e5e5e;
     display: flex;
     flex-direction: column;
-    margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
-    max-width: 800px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    align-items: flex-start;
-    justify-content: flex-start;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: space-between;
+    overflow-wrap: break-word;
 }
 
 .concert h2 {
     color: rgb(66, 46, 46);
-    margin-top: 0;
-    padding: 10px;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 
 /* concert = everything */
 /* concert-info = title and date */
 /* concert-description = description */
-.concert-info1{
+/* concert-footer = artists & repertoire */
+.concert-info{
+    text-align: center;
     background-color: #e6e6e6;
     color: rgb(66, 46, 46);
     border-radius: 8px 8px 8px 8px;
@@ -56,19 +66,25 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    min-height: 100px;
+    width: 80%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-.concert-date1 {
-    font-weight: bold;
-    margin: 10px;
+.concert h3{
+    margin-top: auto;
+    margin-bottom: 10px;
 }
 
-.concert-description1 {
+.concert-date {
+    font-weight: bold;
+}
+
+.concert-description {
+    display: flex;
+    align-items: center;
     padding: 15px;
+    min-height: 420px;
     background-color: #eee; 
     border-radius: 8px 8px 8px 8px;
     margin: 10px ;
@@ -78,22 +94,30 @@ header {
 .concert-footer-info{
     display: flex;
     flex-direction: row;
+    min-height: 200px;
+    margin-left: auto;
 }
 
-.artists {
+.artists { 
+    display: flex;
     background-color: #e6e6e6;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     border-radius: 8px 8px 8px 8px;
     margin: 10px;
     padding: 10px;
+    width: 40%;
+    align-items: center;
 }
 
 .repertoire{
+    display: flex;
     background-color: #e6e6e6;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     border-radius: 8px 8px 8px 8px;
     margin: 10px;
     padding: 10px;
+    width: 60%;
+    align-items: center;
 }
 
 
@@ -108,9 +132,20 @@ footer {
 }
 
 @media screen and (max-width: 400px) {
-    /* Styles for mobile screens */
+    .flex-grid{
+        grid-template-columns: 1fr;
+
+    }
+    .concert, .concert-info, .concert-description, .artists, .repertoire{
+        flex-direction: column;
+        width: 100%; 
+    }
 }
 
-@media screen and (min-width: 1500px) {
-    /* Styles for laptop screens */
+/* Can't get the 400px media query to work :( */
+
+@media screen and (min-width: 1501px) {
+    .flex-grid {
+        max-width: 1fr;
+    }
 }
