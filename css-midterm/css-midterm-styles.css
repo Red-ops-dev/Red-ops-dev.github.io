@@ -213,9 +213,10 @@ div#middle.concert{
 
 
 footer {
-    background-color: #333;
+    background-color: #5e5e5e;
     color: white;
     text-align: center;
+    margin: 20px;
     padding: 10px;
     position: relative;
     bottom: 0;
@@ -232,19 +233,35 @@ footer a:hover {
 }
 
 @media screen and (max-width: 400px) {
+    
+    html{
+        width: 100%;
+    }
+    
     .flex-grid{
         grid-template-columns: 1fr;
         padding: 10px;
     }
-    .concert, .concert-info, .concert-description, .artists, .repertoire{
+
+    .concert-info, .concert-description, .artists, .repertoire{
         flex-direction: column;
         justify-content: center;
-        width: 90%; 
+        height: auto;
         margin: 5px 5px;
         padding: 10px;
+        width: 90%;
+    }
+
+    div#middle.concert{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+        flex-direction: column;
+        
     }
     .concert h2.active-glow {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
     }
 }
 
