@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(71, 169, 255);  
+}
+
+
+label {
+    font-weight: bold;
+    margin: 10px;
+}
+
+div {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    width: 150px;
+}
+
+p {
+    background: #fff6e0;
+    color: #5e2612;
+    padding: 10px;
+    visibility: hidden;
+    margin: 20px;
+}
