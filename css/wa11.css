@@ -1,0 +1,40 @@
+img {
+    width: 50%;
+    height: 45%;
+
+}
+
+.overlay {
+    position: absolute;
+    margin-left: 25%;
+
+    top:10%;
+    left:0;
+    width: 50%;
+    height: 48%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.thumb-bar img{
+    display: block;
+    width: 100px;
+    height: fit-content;
+    float: left;
+    cursor: pointer;
+}
+
+body{
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: brown;
+    width: 100%;
+    justify-content: center;
+}
+
+h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button{
+    background-color: blanchedalmond;
+}
