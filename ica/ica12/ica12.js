@@ -1,27 +1,45 @@
-const newQuoteButton = document.querySelector('#js-new-quote');
-newQuoteButton.addEventListener('click', getQuote);
+const btn = document.querySelector('#js-new-quote');
+btn.addEventListener('click', getQuote);
 
-const apiEndpoint = 'https://trivia.cyberwisp.com/getrandomchristmasquestion';
+const answerBtn = document.querySelector('#js-tweet');
+answerBtn.addEventListener('click', getAnswer);
 
-function getQuote() {
-    console.log('Button clicked'); // Test the button click
+const answerText = document.querySelector ("#js-answer-text");
 
-    // Fetch the quote directly within this function
-    fetch(apiEndpoint)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data); // Output the quote to the console
-        displayQuote(data);
-      })
-      .catch(error => {
-        console.error('Error fetching quote:', error);
-        alert('Failed to fetch quote. Please try again.');
-      });
+const endpoint = 'https://trivia.cyberwisp.com/getrandomchristmasquestion';
+
+let answer = '';
+
+async function getQuote() {
+
+    try {
+        const response = await fetch(endpoint);
+        if (!response.ok) {
+            throw Error(response.statusText)
+        }
+
+
+        const json = await response.json();
+        console.log(json['question']);
+        displayQuote(json['question']);
+        console.log(json['answer']);
+        answer = json['answer'];
+        answerText.textContent = '';
+    } catch (err) {
+        console.log(err);
+        alert('Failed to fetch new quote');
+    }
 }
 
-function displayQuote(quoteData) {
-    const quoteTextElement = document.getElementById('js-quote-text');
-    quoteTextElement.textContent = quoteData.question; // Assuming the quote is in the 'question' field
+function displayQuote(quote) {
+    const quoteText = document.querySelector
+    ('#js-quote-text');
+    quoteText.textContent = quote; 
 }
 
-document.addEventListener('DOMContentLoaded', getQuote);
+function getAnswer() {
+    answerText.textContent = answer;
+}
+
+getQuote();
+
