@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>JSON: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+      <h2> Cat Info Excercise </h2> 
+<!-- ^^ added heading to remove lack of section heading error -->
+
+
+    </section>
+
+  
+  <script>
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
+    let motherInfo = 'The mother cats are called ';
+    let kittenInfo = 'In total, there are ';
+    const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json';
+
+    fetch(requestURL)
+    .then(response => response.text())
+    .then(text => displayCatInfo(text))
+
+    function displayCatInfo(catString) {
+      const cats = JSON.parse(catString);
+      let totalKittens = 0;
+      let maleKittens = 0;
+      let femaleKittens = 0;
+      let names = cats.map(cat => cat.name);
+
+      motherInfo += names.slice(0, -1).join(', ') + ', and ' + names.slice(-1) + '.';
+
+      cats.forEach(cat => {
+        totalKittens += cat.kittens.length;
+        maleKittens += cat.kittens.filter(kitten => kitten.gender === 'm').length;
+        femaleKittens += cat.kittens.filter(kitten => kitten.gender === 'f').length;
+      });
+
+      kittenInfo += totalKittens + ' kittens, ' + maleKittens + ' are male and ' + femaleKittens + ' are female. ';
+
+      // Add your code here
+
+      // Don't edit the code below here!
+
+      para1.textContent = motherInfo;
+      para2.textContent = kittenInfo;
+    }
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+  </body>
+</html>
