@@ -18,6 +18,17 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
+function loop() {
+  ctx.fillStyle = 'rgb(0, 0, 0, 25%)';
+  ctx.fillRect(0, 0, width, height);
+  
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+  }
+
+  requestAnimationFrame(loop);
+}
 
 class Ball {
   constructor(x, y, velX, velY, color, size) {
@@ -90,26 +101,15 @@ while (balls.length < 10) {
     random(0 + size, width - size),
     random(0 + size, height - size),
     random(-10, 10),
-    random(-10,10),
+    random(-10, 10),
     randomRGB(),
     size,
 
   );
 
+  balls.push(ball);
 
-}
 
-function loop() {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-  ctx.fillRect(0, 0, width, height);
-  
-  for (const ball of balls) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
-  }
-
-  requestAnimationFrame(loop);
 }
 
 loop();
