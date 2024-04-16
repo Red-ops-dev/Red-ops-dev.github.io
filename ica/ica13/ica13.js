@@ -72,7 +72,7 @@ class Ball {
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance <this.size + ball.size) {
+        if (distance < this.size + ball.size) {
           ball.color = this.color = randomRGB();
         }
       }
@@ -99,6 +99,19 @@ while (balls.length < 10) {
 
 }
 
+function loop() {
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+  ctx.fillRect(0, 0, width, height);
+  
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+  }
 
+  requestAnimationFrame(loop);
+}
+
+loop();
 // for extra credit make the balls bounce off eachother instead of flashing different colors
 // another 1% extra credit if 75% of class does FCQs
