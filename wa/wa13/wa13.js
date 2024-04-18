@@ -24,6 +24,7 @@ let HR1 = [
         "raiseEligible" : false
     }
 ]
+console.log(HR1);
 
 // Problem 2
 const HR2 = {
@@ -31,6 +32,8 @@ const HR2 = {
     "website" : "www.techstars.site",
     "employees" : HR1
 }
+
+console.log(HR2);
 
 // Problem 3
 const Anna = {
