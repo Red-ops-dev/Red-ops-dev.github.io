@@ -25,6 +25,7 @@ function loop() {
   for (const ball of balls) {
     ball.draw();
     ball.update();
+    ball.collisionDetect();
   }
 
   requestAnimationFrame(loop);
@@ -84,18 +85,25 @@ class Ball {
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < this.size + ball.size) {
-          ball.color = this.color = randomRGB();
+          const tempVelX = this.velX;
+          const tempVelY = this.velY;
+
+          this.velX = ball.velX;
+          this.velY = ball.velY;
+
+          ball.velX = tempVelX;
+          ball.velY = tempVelY;
         }
       }
     }
   }
 
 }
-
+// stores velocity then swaps it to simulate a bounce 
 
 const balls = [];
 
-while (balls.length < 10) {
+while (balls.length < 50) {
   const size = random(1, 20);
   const ball = new Ball (
     random(0 + size, width - size),
