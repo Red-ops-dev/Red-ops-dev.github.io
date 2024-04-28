@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Slot Machine</title>
+    <link rel="stylesheet" href="jsproject.css">
+</head>
+<body>
+    <div id="slotMachine">
+        <div id="reels">
+            <div class="reel"><img src="/../img/speakerVolume0.png" alt="Volume 0"></div>
+            <div class="reel"><img src="/../img/speakerVolume33.png" alt="Volume 33"></div>
+            <div class="reel"><img src="/../img/speakerVolume66.png" alt="Volume 66"></div>
+            <div class="reel"><img src="/../img/speakerVolume100.png" alt="Volume 100"></div>
+        </div>
+        <button id="spinButton">Spin</button>
+        <div id="volumeDisplay">Volume: 50%</div>
+    </div>
+    <div id="winModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>You win!</p>
+            <input type="range" id="volumeSlider" min="0" max="100" value="50">
+        </div>
+    </div>
+    <div id="rulesBox">
+        <h3>Game Rules:</h3>
+        <ul>
+            <li>Spin to try your luck.</li>
+            <li>2% chance to win each spin.</li>
+            <li>Win by lining up three 🔊 icons.</li>
+        </ul>
+    </div>
+    <script src="jsproject.js"></script>
+</body>
+</html>
+
