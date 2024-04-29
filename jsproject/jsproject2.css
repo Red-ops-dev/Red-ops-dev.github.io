@@ -11,9 +11,11 @@ p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     color: #a4a4a4;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
 div#result {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
     color: #a4a4a4;
     margin-top: 20px;
     font-size: larger;
@@ -36,6 +38,7 @@ div#result {
 }
 
 #volumeBar {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
     height: 100%;
     background-color: green;
     width: 0%; 
