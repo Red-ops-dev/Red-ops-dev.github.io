@@ -1,0 +1,105 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: url('../img/casino.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #a4a4a4;
+}
+
+div#result {
+    color: #a4a4a4;
+    margin-top: 20px;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+#spin {
+    margin-top: 10px;
+    padding: 5px
+}
+
+#volumeBarContainer {
+    width: 300px;
+    height: 20px;
+    background-color: #cac5c5;
+    margin: 20px auto;
+    border-radius: 30px;
+}
+
+#volumeBar {
+    height: 100%;
+    background-color: green;
+    width: 0%; 
+    border-radius: 30px;
+}
+
+
+#slot-machine {
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.reel {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+#winModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#rulesBox {
+
+    background-color: #dcd9d9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    right: 10px;
+    top: 10px;
+}

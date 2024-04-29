@@ -3,17 +3,17 @@ document.getElementById('spinButton').addEventListener('click', () => {
 });
 
 const images = [
-    '/../img/speakerVolume0.png',
-    '/../img/speakerVolume33.png',
-    '/../img/speakerVolume66.png',
-    '/../img/speakerVolume100.png'
+    'speakerVolume0.png',
+    'speakerVolume33.png',
+    'speakerVolume66.png',
+    'speakerVolume100.png'
 ];
 
 function checkWinCondition(results) {
     const winCombo = [
-        '/../img/speakerVolume33.png',
-        '/../img/speakerVolume66.png',
-        '/../img/speakerVolume100.png'
+        'speakerVolume33.png',
+        'speakerVolume66.png',
+        'speakerVolume100.png'
     ];
     const isWin = results[0] === winCombo[0] && results[1] === winCombo[1] && results[2] === winCombo[2];
 

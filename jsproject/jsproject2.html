@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Slot Machine Volume Control</title>
+    <link rel="stylesheet" href="jsproject2.css">
+</head>
+<body>
+    <div id="slot-machine">
+        <div id="reels">
+            <img src="volume0.png" class="reel" alt="volume 0" id="reel1">
+            <img src="volume50.png" class="reel" alt="volume 50" id="reel3">
+            <img src="volume100.png" class="reel" alt="volume 100" id="reel4">
+        </div>
+        <button id="spin">Spin</button>
+        <div id="result"> I'm Feeling Lucky</div>
+    </div>
+
+    <p id="vol">Volume: <span id="volumePercentage">0%</span></p>
+
+    <div id="volumeBarContainer">
+        <div id="volumeBar"></div>
+    </div>
+
+    <div id="winModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>You win!</p>
+            <input type="range" id="volumeControl" min="0" max="100" value="50">
+            <p>Volume: <span id="volumeDisplay">50%</span></p>
+        </div>
+    </div>
+    <div id="rulesBox">
+        <h3>Game Rules:</h3>
+        <ul>
+            <li>Spin to try your luck!</li>
+            <li>3 of the same = volume change</li>
+            <li>Volume goes back to zero if the mute button appears</li>
+            <li>Line up from low to high to gain full access</li>
+        </ul>
+    </div>
+    <script src="jsproject2.js"></script>
+</body>
+</html>
