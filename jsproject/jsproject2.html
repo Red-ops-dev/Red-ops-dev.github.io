@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="jsproject2.css">
 </head>
 <body>
+    <div id="everythingContainer">
     <div id="slot-machine">
         <div id="reels">
-            <img src="volume0.png" class="reel" alt="volume 0" id="reel1">
-            <img src="volume50.png" class="reel" alt="volume 50" id="reel3">
-            <img src="volume100.png" class="reel" alt="volume 100" id="reel4">
+            <img src="volume0.png" class="reel" alt="volume 0" id="reel1" onclick="toggleLock('reel1')">
+            <img src="volume50.png" class="reel" alt="volume 50" id="reel3" onclick="toggleLock('reel3')">
+            <img src="volume100.png" class="reel" alt="volume 100" id="reel4" onclick="toggleLock('reel4')">
         </div>
         <button id="spin">Spin</button>
         <div id="result"> I'm Feeling Lucky</div>
@@ -35,10 +36,11 @@
         <h3>Game Rules:</h3>
         <ul>
             <li>Spin to try your luck!</li>
+            <li>Click a box to lock it in place</li>
             <li>3 of the same = volume change</li>
-            <li>Volume goes back to zero if the mute button appears</li>
-            <li>Line up from low to high to gain full access</li>
+            <li>Line up from low to high to win full access to the volume</li>
         </ul>
+    </div>
     </div>
     <script src="jsproject2.js"></script>
 </body>

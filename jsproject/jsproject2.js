@@ -1,11 +1,31 @@
+let lockedReels = {};
+
+function toggleLock(reelId) {
+    const reel = document.getElementById(reelId);
+    if (lockedReels[reelId]) {
+        reel.classList.remove('locked');
+        delete lockedReels[reelId];
+    } else {
+        reel.classList.add('locked');
+        lockedReels[reelId] = true;
+    }
+}
+
+
+
+
 document.getElementById('spin').addEventListener('click', function() {
-    let images = ["volume0.png", "volume50.png", "volume100.png"];
+    let images = ["../jsproject/volume0.png", "../jsproject/volume50.png", "../jsproject/volume100.png"];
     let reels = document.querySelectorAll('.reel');
     let results = [];
     for (let reel of reels) {
-        let result = images[Math.floor(Math.random() * images.length)];
-        reel.src = result;
-        results.push(result);
+        if (!lockedReels[reel.id]) { 
+            let result = images[Math.floor(Math.random() * images.length)];
+            reel.src = result;
+            results.push(result.split('/').pop());  
+        } else {
+            results.push(reel.src.split('/').pop()); 
+        }
     }
     if (!checkSpecialVolumeAdjustment(results)) {
         updateVolume(results);
@@ -29,12 +49,15 @@ function updateVolume(results) {
         'volume100.png': 100
     };
 
-    if (results.includes("volume0.png")) {
+    if (results.includes("../jsproject/volume0.png")) {
         setVolume(0);
     } else if (results[0] === results[1] && results[1] === results[2]) {
         setVolume(volumeCounts[results[0]]);
     }
 }
+
+
+
 
 function setVolume(volume) {
     document.getElementById('volumeControl').value = volume;
@@ -71,3 +94,8 @@ document.getElementById('volumeControl').addEventListener('input', function() {
     document.getElementById('volumePercentage').textContent = volume + '%';
     updateVolumeBar(volume);
 });
+
+
+
+
+
